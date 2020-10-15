@@ -118,6 +118,8 @@ bool loadConfig(struct Settings &sett)
         sett.mask = IPAddress(255,255,255,0);
 
         sett.liters_per_impuls = LITRES_PER_IMPULS_DEFAULT;
+		
+		sett.send_period = SEND_PERIOD_DEFAULT;
 
 //Можно задать константы при компиляции, чтобы Ватериус сразу заработал
 
