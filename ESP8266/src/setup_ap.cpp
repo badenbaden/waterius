@@ -197,7 +197,7 @@ void setup_ap(Settings &sett, const SlaveData &data, const CalculatedData &cdata
     
     // Период отправки показаний
 
-    WiFiManagerParameter label_send_period("<h3>Период отправки показаний</h3>");
+    WiFiManagerParameter label_send_period("<h3><font color="blue">Период отправки показаний</font></h3>");
     wm.addParameter( &label_send_period);
     IPAddressParameter param_send_period("sp", "Интервал отправки показаний на сервер/mqtt/blynk",  sett.send_period);
     wm.addParameter( &param_send_period );
