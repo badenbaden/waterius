@@ -171,7 +171,7 @@ void setup_ap(Settings &sett, const SlaveData &data, const CalculatedData &cdata
     WiFiManagerParameter param_mqtt_topic( "mtopic", "Topic",  sett.mqtt_topic, MQTT_TOPIC_LEN-1);
     wm.addParameter( &param_mqtt_topic );
     
-    // Статический ip
+    // Сетевые настройки
     
     WiFiManagerParameter label_network("<h3>Сетевые настройки</h3>");
     wm.addParameter( &label_network);
@@ -194,7 +194,14 @@ void setup_ap(Settings &sett, const SlaveData &data, const CalculatedData &cdata
 
     WiFiManagerParameter label_factor("<p><b>Вес импульса (авто): <a id='factor'></a> л/имп</b></p>");
     wm.addParameter( &label_factor);
+    
+    // Период отправки показаний
 
+    WiFiManagerParameter label_send_period("<h3>Период отправки показаний</h3>");
+    wm.addParameter( &label_send_period);
+    IPAddressParameter param_send_period("sp", "Интервал отправки показаний на сервер/mqtt/blynk",  sett.send_period);
+    wm.addParameter( &param_send_period );
+    
     // конец доп. настроек
     WiFiManagerParameter div_end("</div>");
     wm.addParameter(&div_end);
