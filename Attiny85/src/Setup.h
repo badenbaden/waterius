@@ -48,9 +48,9 @@
 	Период отправки данных на сервер, мин
 */
 #ifdef TEST_WATERIUS
-#define WAKE_EVERY_MIN   10
+unsigned int WAKE_EVERY_MIN   10
 #else
-#define WAKE_EVERY_MIN   24 * 60U  // 1U 
+unsigned int WAKE_EVERY_MIN   24 * 60U  // 1U 
 #endif
 
 /*
